@@ -65,9 +65,6 @@
             background-color: #f9f9f9;
         }
 
-        #deneyimler {
-            background-color: #ffffff;
-        }
 
         #projeler {
             background-color: #f9f9f9;
@@ -78,7 +75,7 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 80%;
             margin: 0 auto;
             padding: 2rem;
         }
@@ -218,6 +215,53 @@
         .social-link.instagram:hover {
             color: #e4405f;
         }
+
+        .project-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            flex: 1 1 calc(25% - 2rem);
+            background: #f0f0f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            max-width: 150px;
+            margin-bottom: 1rem;
+        }
+
+        .project-card a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .project-card {
+                flex: 1 1 calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                flex: 1 1 100%;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -226,8 +270,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#hakkimda">Hakkımda</a></li>
-                <li><a href="#deneyimler">Deneyimler</a></li>
-                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="#projeler">Projelerim ve Deneyimlerim</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
@@ -302,17 +345,56 @@
         </div>
     </section>
 
-    <section id="deneyimler">
-        <div class="container">
-            <h2>Deneyimler</h2>
-            <!-- Buraya deneyimlerinizi ekleyeceksiniz -->
-        </div>
-    </section>
 
     <section id="projeler">
         <div class="container">
-            <h2>Projeler</h2>
-            <!-- Buraya projelerinizi ekleyeceksiniz -->
+            <h2>Deneyim ve Projeler</h2>
+            
+            <h3>Web Sitelerim</h3>
+            <div class="project-section">
+                <div class="project-card">
+                    <a href="https://vr.themax.world/" target="_blank">
+                        <img src="https://vr.themax.world/wp-content/themes/yootheme-child/assets/logo/logo.svg" alt="VR The Max Logo">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://www.themax.world/" target="_blank">
+                        <img src="https://www.themax.world/wp-content/themes/yootheme-child/assets/logo/logo.svg" alt="The Max Logo">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://www.temax-xps.com/tr/" target="_blank">
+                        <img src="https://temax-xps.com/app/uploads/2022/02/xpslogo1.png" alt="Temax XPS Logo">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://deliziya.com.tr/" target="_blank">
+                        <img src="https://deliziya.com.tr/wp-content/uploads/thegem-logos/logo_78f9c65c439e99867040b17510d620d0_2x.png" alt="Deliziya Logo">
+                    </a>
+                </div>
+            </div>
+
+            <h3>Projelerim</h3>
+            <div class="project-section">
+                <div class="project-card">
+                    <a href="https://www.hurriyet.com.tr/hesaplama-araclari/" target="_blank">
+                        <img src="https://static.hurriyet.com.tr/static/images/redesign/hurriyet-logo-red.svg?v=azure-43307" alt="Hürriyet Logo">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="https://www.milliyet.com.tr/hesaplama-araclari/" target="_blank">
+                        <img src="https://static.milliyet.com.tr/images/milliyet/milliyet_dijital_logo.svg?v=4" alt="Milliyet Logo">
+                    </a>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; font-size: 0.9rem;">
+                        <li><a href="https://www.milliyet.com.tr/hesaplama-araclari/kredi-hesaplama" target="_blank">Kredi Hesaplama</a></li>
+                        <li><a href="https://www.milliyet.com.tr/hesaplama-araclari/zam-hesaplama" target="_blank">Zam Hesaplama</a></li>
+                        <li><a href="https://www.milliyet.com.tr/hesaplama-araclari/indirim-orani-hesaplama" target="_blank">İndirim Oranı Hesaplama</a></li>
+                        <li><a href="https://www.milliyet.com.tr/hesaplama-araclari/vucut-kitle-indeksi-hesaplama" target="_blank">Vücut Kitle İndeksi Hesaplama</a></li>
+                        <li><a href="https://www.milliyet.com.tr/hesaplama-araclari/gunluk-kalori-hesaplama" target="_blank">Günlük Kalori Hesaplama</a></li>
+                    </ul>
+                </div>
+                <!-- Diğer projelerinizi buraya ekleyebilirsiniz -->
+            </div>
         </div>
     </section>
 
