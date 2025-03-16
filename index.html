@@ -76,6 +76,60 @@
         #iletisim {
             background-color: #ffffff;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .profile-title {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -92,8 +146,45 @@
 
     <section id="hakkimda">
         <div class="container">
-            <h1>Hakkımda</h1>
-            <!-- Buraya hakkınızda bilgiler ekleyeceksiniz -->
+            <div class="profile-section">
+                <div class="profile-info">
+                    <h1>Efe Emir Üşenmez</h1>
+                    <div class="profile-title">Bilgisayar Mühendisi</div>
+                    
+                    <div class="info-card">
+                        <h3 class="section-title">Profesyonel Özet</h3>
+                        <p>Çözüm odaklı yaklaşımı ve güçlü problem çözme yetenekleriyle öne çıkan, 4 yıllık deneyime sahip bir Bilgisayar Mühendisiyim. Kapsamlı programlama bilgim ve analitik düşünce yapım ile karmaşık teknik sorunlara etkili çözümler üretiyorum.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="section-title">Eğitim</h3>
+                        <p>🎓 Topkapı Üniversitesi - Bilgisayar Mühendisliği</p>
+                        <p>🌍 Malta - İngilizce Dil Eğitimi (B1 Seviyesi)</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="section-title">Teknik Beceriler</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">AI</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 class="section-title">Profesyonel Deneyim</h3>
+                        <p><strong>Demirören Medya</strong><br>
+                        2024/10 - Günümüz</p>
+                        <br>
+                        <p><strong>Themax Media</strong><br>
+                        2021/08 - 2024/10</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
