@@ -78,36 +78,77 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        .profile-section {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            align-items: start;
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        .profile-info h1 {
+        .profile-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .profile-top {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        .profile-info {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        .profile-header h1 {
+            margin-bottom: 0.5rem;
             font-size: 2.5rem;
             color: #333;
-            margin-bottom: 1rem;
         }
 
         .profile-title {
             font-size: 1.2rem;
             color: #666;
-            margin-bottom: 2rem;
         }
 
         .info-card {
+            height: 100%;
             background: white;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
         }
 
         .skills-list {
@@ -131,60 +172,54 @@
             margin-bottom: 1rem;
         }
 
-        .skills-category {
-            margin-bottom: 2rem;
+        @media (max-width: 1200px) {
+            .profile-top {
+                grid-template-columns: 1fr;
+            }
+            .profile-header {
+                align-items: center;
+                text-align: center;
+            }
         }
 
-        .skills-category h4 {
-            color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+        @media (max-width: 992px) {
+            .profile-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .skill-item {
-            margin-bottom: 1rem;
+        @media (max-width: 768px) {
+            .profile-info {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .skill-name {
-            display: inline-block;
-            width: 200px;
-            font-weight: 500;
-        }
-
-        .skill-level {
-            display: inline-block;
-            margin-left: 10px;
-        }
-
-        .skill-dot {
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            margin-right: 3px;
-            background-color: #333;
-            border-radius: 50%;
-        }
-
-        .skill-dot.empty {
-            background-color: #ddd;
-        }
-
-        .language-skills {
+        .social-links {
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        .language-category {
-            display: flex;
-            align-items: center;
+        .social-link {
+            color: #666;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            text-decoration: none;
         }
 
-        .language-type {
-            width: 100px;
-            font-weight: 500;
+        .social-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-link.linkedin:hover {
+            color: #0077b5;
+        }
+
+        .social-link.instagram:hover {
+            color: #e4405f;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
@@ -201,10 +236,35 @@
     <section id="hakkimda">
         <div class="container">
             <div class="profile-section">
+                <div class="profile-top">
+                    <div class="profile-left">
+                        <img src="https://efeemirusenmez.vercel.app/resim.jpg" 
+                             alt="Efe Emir Üşenmez" 
+                             class="profile-image">
+                        
+                        <div class="social-links">
+                            <a href="https://tr.linkedin.com/in/efe-emir-%C3%BC%C5%9Fenmez-b04327210" 
+                               target="_blank" 
+                               class="social-link linkedin" 
+                               title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/efemiir/" 
+                               target="_blank" 
+                               class="social-link instagram" 
+                               title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="profile-header">
+                        <h1>Efe Emir Üşenmez</h1>
+                        <div class="profile-title">Bilgisayar Mühendisi</div>
+                    </div>
+                </div>
+
                 <div class="profile-info">
-                    <h1>Efe Emir Üşenmez</h1>
-                    <div class="profile-title">Bilgisayar Mühendisi</div>
-                    
                     <div class="info-card">
                         <h3 class="section-title">Profesyonel Özet</h3>
                         <p>Çözüm odaklı yaklaşımı ve güçlü problem çözme yetenekleriyle öne çıkan, 4 yıllık deneyime sahip bir Bilgisayar Mühendisiyim. Kapsamlı programlama bilgim ve analitik düşünce yapım ile karmaşık teknik sorunlara etkili çözümler üretiyorum.</p>
@@ -217,168 +277,24 @@
                     </div>
 
                     <div class="info-card">
-                        <h3 class="section-title">Beceriler</h3>
-                        
-                        <div class="skills-category">
-                            <h4>Önyüz</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">HTML5</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">CSS - SASS - LESS</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Bootstrap</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">JS</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">jQuery</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <h4>Veri Yönetimi</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">SQL Server - TSQL</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Entity Framework</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot empty"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Dapper</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot empty"></span>
-                                    <span class="skill-dot empty"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Redis</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot empty"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">RabbitMQ</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot empty"></span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <h4>Versiyonlama CI/CD</h4>
-                            <div class="skill-item">
-                                <span class="skill-name">Git</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot empty"></span>
-                                </span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Jira</span>
-                                <span class="skill-level">
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot"></span>
-                                    <span class="skill-dot empty"></span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="skills-category">
-                            <h4>Lisan</h4>
-                            <div class="language-skills">
-                                <div class="skill-item">
-                                    <span class="skill-name">İngilizce - Okuma</span>
-                                    <span class="skill-level">
-                                        <span class="skill-dot"></span>
-                                        <span class="skill-dot"></span>
-                                        <span class="skill-dot empty"></span>
-                                        <span class="skill-dot empty"></span>
-                                    </span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">İngilizce - Yazma</span>
-                                    <span class="skill-level">
-                                        <span class="skill-dot"></span>
-                                        <span class="skill-dot"></span>
-                                        <span class="skill-dot empty"></span>
-                                        <span class="skill-dot empty"></span>
-                                    </span>
-                                </div>
-                                <div class="skill-item">
-                                    <span class="skill-name">İngilizce - Konuşma</span>
-                                    <span class="skill-level">
-                                        <span class="skill-dot"></span>
-                                        <span class="skill-dot"></span>
-                                        <span class="skill-dot empty"></span>
-                                        <span class="skill-dot empty"></span>
-                                    </span>
-                                </div>
-                            </div>
+                        <h3 class="section-title">Teknik Beceriler</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">AI</span>
                         </div>
                     </div>
 
                     <div class="info-card">
                         <h3 class="section-title">Profesyonel Deneyim</h3>
-                        <p><strong>Demirören Medya</strong><br>
+                        <p><strong><a href="https://www.demiroren.com.tr/" target="_blank" style="color: #333; text-decoration: none; transition: color 0.3s ease;">Demirören Medya</a></strong><br>
                         2024/10 - Günümüz</p>
                         <br>
-                        <p><strong>Themax Media</strong><br>
+                        <p><strong>The Max Media</strong><br>
                         2021/08 - 2024/10</p>
                     </div>
                 </div>
