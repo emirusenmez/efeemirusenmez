@@ -1,1 +1,121 @@
-bu bir cv
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benim CV'im</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00ff9d;
+        }
+
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hakkimda {
+            background-color: #f9f9f9;
+        }
+
+        #deneyimler {
+            background-color: #ffffff;
+        }
+
+        #projeler {
+            background-color: #f9f9f9;
+        }
+
+        #iletisim {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#deneyimler">Deneyimler</a></li>
+                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hakkimda">
+        <div class="container">
+            <h1>Hakkımda</h1>
+            <!-- Buraya hakkınızda bilgiler ekleyeceksiniz -->
+        </div>
+    </section>
+
+    <section id="deneyimler">
+        <div class="container">
+            <h2>Deneyimler</h2>
+            <!-- Buraya deneyimlerinizi ekleyeceksiniz -->
+        </div>
+    </section>
+
+    <section id="projeler">
+        <div class="container">
+            <h2>Projeler</h2>
+            <!-- Buraya projelerinizi ekleyeceksiniz -->
+        </div>
+    </section>
+
+    <section id="iletisim">
+        <div class="container">
+            <h2>İletişim</h2>
+            <!-- Buraya iletişim formunu ekleyeceksiniz -->
+        </div>
+    </section>
+</body>
+</html>
