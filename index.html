@@ -130,6 +130,60 @@
             color: #333;
             margin-bottom: 1rem;
         }
+
+        .skills-category {
+            margin-bottom: 2rem;
+        }
+
+        .skills-category h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            display: inline-block;
+            width: 200px;
+            font-weight: 500;
+        }
+
+        .skill-level {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .skill-dot {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 3px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+
+        .skill-dot.empty {
+            background-color: #ddd;
+        }
+
+        .language-skills {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .language-category {
+            display: flex;
+            align-items: center;
+        }
+
+        .language-type {
+            width: 100px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -163,15 +217,159 @@
                     </div>
 
                     <div class="info-card">
-                        <h3 class="section-title">Teknik Beceriler</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">Bootstrap</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">AI</span>
+                        <h3 class="section-title">Beceriler</h3>
+                        
+                        <div class="skills-category">
+                            <h4>Önyüz</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">CSS - SASS - LESS</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JS</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">jQuery</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4>Veri Yönetimi</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">SQL Server - TSQL</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Entity Framework</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Dapper</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Redis</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">RabbitMQ</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4>Versiyonlama CI/CD</h4>
+                            <div class="skill-item">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Jira</span>
+                                <span class="skill-level">
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot"></span>
+                                    <span class="skill-dot empty"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4>Lisan</h4>
+                            <div class="language-skills">
+                                <div class="skill-item">
+                                    <span class="skill-name">İngilizce - Okuma</span>
+                                    <span class="skill-level">
+                                        <span class="skill-dot"></span>
+                                        <span class="skill-dot"></span>
+                                        <span class="skill-dot empty"></span>
+                                        <span class="skill-dot empty"></span>
+                                    </span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">İngilizce - Yazma</span>
+                                    <span class="skill-level">
+                                        <span class="skill-dot"></span>
+                                        <span class="skill-dot"></span>
+                                        <span class="skill-dot empty"></span>
+                                        <span class="skill-dot empty"></span>
+                                    </span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">İngilizce - Konuşma</span>
+                                    <span class="skill-level">
+                                        <span class="skill-dot"></span>
+                                        <span class="skill-dot"></span>
+                                        <span class="skill-dot empty"></span>
+                                        <span class="skill-dot empty"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
